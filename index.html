@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit Margin Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Profit Margin Calculator</h1>
+        <div class="input-container">
+            <label for="cost">(COGS)/Sales:</label>
+            <input type="number" id="cost" step="0.01" placeholder="Enter cost">
+        </div>
+        <div class="input-container">
+            <label for="revenue">Price/Revenue:</label>
+            <input type="number" id="revenue" step="0.01" placeholder="Enter revenue">
+        </div>
+        <div class="profit-margin-container">
+            <label for="profit-margin-slider">Profit Margin (%): <span id="profit-margin-value">50%</span></label>
+            <input type="range" id="profit-margin-slider" min="0" max="100" value="50">
+        </div>
+        <button onclick="calculateProfitMargin()">Calculate</button>
+        <div class="result-container">
+            <p>Calculated Gross Profit Margin (%): <span id="profit-margin-result">-</span></p>
+            <p id="profit-result">Calculated Profit ($): -</p>
+        </div>
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
